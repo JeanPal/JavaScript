@@ -11,25 +11,28 @@ do {
     dato1 = prompt(`Elija una opción:\n1. Convertir a Fahrenheit\n2. Convertir a Kelvin`);
     dato2= '';
 
-    if (dato1.trim() === '') {
+    let stringConTrim = dato1.trim();
+    if (stringConTrim) {
         alert('No puedes dejar espacios vacios');
         continue;
-    } else if (isNaN(dato1.trim())) {
+    } else if (isNaN(stringConTrim)) {
         alert('Debe ingresar un número no letra o caracteres especiales');
         continue;
-    } else if (dato1.trim() >= 3) {
+    } else if (stringConTrim >= 3) {
         alert('Debe ingresar solo numeros disponibles en la lista');
         continue;
-    } else if (dato1.trim() <= 0 ) {
+    } else if (stringConTrim <= 0 ) {
         alert('Debe ingresar solo numeros disponibles en la lista');
         continue;
     }
 
     dato2 = prompt(`Ingrese una temperatura en grados Celsius`);
 
-    if (dato2.trim() === '') {
+    let stringConTrim2 = dato2.trim();
+
+    if (stringConTrim2) {
         alert('No puedes dejar espacios vacios');
-    } else if (isNaN(dato2.trim())) {
+    } else if (isNaN(stringConTrim2)) {
         alert('Debe ingresar un número no letra o caracteres especiales');
     } 
 
