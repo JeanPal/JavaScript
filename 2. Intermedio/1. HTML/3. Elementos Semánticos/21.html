@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript | Ll</title>
+
+</head>
+
+<style>
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .contenido {
+    max-width: 95%;
+    margin: 20px auto;
+    padding: 20px;
+    margin-bottom: 100px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+
+  .imagen {
+    float: left;
+    margin-right: 20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    margin-left: 20px;
+  }
+
+  .pricing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+  }
+
+  .pricing-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    width: 300px;
+  }
+
+  .pricing-card:hover {
+    transform: translateY(-10px);
+  }
+
+  .pricing-card img {
+    width: 150px;
+    min-height: 200px;
+  }
+
+  .prin {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 50px;
+  }
+
+  .titulo {
+    text-align: center;
+  }
+
+  .commentarios {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .comment p {
+    margin: 0;
+  }
+
+  .author {
+    font-weight: bold;
+  }
+
+  .fecha {
+    font-style: italic;
+    color: #888;
+  }
+
+  .slider-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+  }
+
+  .slider-container img {
+    flex: 0 0 100%;
+    width: 100%;
+    object-fit: cover;
+    scroll-snap-align: center;
+  }
+
+  .pagos {
+    text-align: center;
+  }
+</style>
+
+<body>
+  <header>
+    <h1>Tienda Web</h1>
+  </header>
+
+  <article id="tienda" class="contenido">
+    <img class="prin" src="https://juegosdigitalescolombia.com/files/images/slider/1709826697_2_11zon.webp"
+      alt="principio">
+    <h2 class="titulo">Difruta de la mejor experiencia en nuestro catalogo de precios!</h2>
+    <div class="pricing-container">
+      <div class="pricing-card">
+        <img
+          src="https://acdn.mitiendanube.com/stores/002/596/264/products/ps4ps5-copy111-3a0b52722aedb083c216833193300960-480-0.jpeg"
+          alt="Producto 1">
+        <h2>Minecraft Java</h2>
+        <p>$40</p>
+        <button>Comprar</button>
+      </div>
+      <div class="pricing-card">
+        <img
+          src="https://juegosdigitalescolombia.com/files/images/thumbs/productos_300x400_1671054086-tekken-8-ps5-pre-orden-0.jpg"
+          alt="Producto 2">
+        <h2>Tekken 8</h2>
+        <p>$119</p>
+        <button>Comprar</button>
+      </div>
+      <div class="pricing-card">
+        <img
+          src="https://juegosdigitalescolombia.com/files/images/thumbs/productos_300x400_1687471748-prince-of-persia-the-lost-crown-ps4-pre-orden-0.jpg"
+          alt="Producto 3">
+        <h2>Prince of persia </h2>
+        <p>$49</p>
+        <button>Comprar</button>
+      </div>
+      <div class="pricing-card">
+        <img
+          src="https://juegosdigitalescolombia.com/files/images/thumbs/productos_300x400_1697557642-marvels-spider-man-2-ps5-pre-orden-0.jpg"
+          alt="Producto 3">
+        <h2>Spider man 2022</h2>
+        <p>$59</p>
+        <button>Comprar</button>
+      </div>
+    </div>
+    <section class="pagos">
+      <h2>Metodos De Pagos</h2>
+      <img
+        src="https://media.discordapp.net/attachments/800522328701272065/1219654225756160124/imagen2-removebg-preview.png?ex=660c1683&is=65f9a183&hm=4968c29aa496f5261e8d0f941c9d81fa102c172dca17fdff18943f2dfc8a4a0f&=&format=webp&quality=lossless"
+        alt="Imagen 1">
+    </section>
+    <section class="comment">
+      <h2>Comentarios</h2>
+      <div class="commentarios">
+        <p class="author">Usuario1</p>
+        <p>Buen sitio de juegos, tiene catalogo actualizado y precios increibles</p>
+        <p class="fecha">11 de marzo de 2024</p>
+      </div>
+      <div class="commentarios">
+        <p class="author">Usuario2</p>
+        <p>Recomendado!, mis juegos llegaron a tiempo y ahora estoy difrutando.</p>
+        <p class="fecha">12 de marzo de 2024</p>
+      </div>
+    </section>
+  </article>
+  <footer>
+    <p>Información de contacto: ejemplo@example.com | Teléfono: 123456789</p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Ll</title>
+
+</head>
+
+<style>
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .commentarios {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .comment p {
+        margin: 0;
+    }
+
+    .author {
+        font-weight: bold;
+    }
+
+    .fecha {
+        font-style: italic;
+        color: #888;
+    }
+</style>
+
+<body>
+    <header>
+        <h1>Titutlo</h1>
+    </header>
+
+    <div>
+        <p>TEXTO DONDE VA CUALQUIER DATO.</p>
+    </div>
+
+    <section class="comentarios">
+        <h1>Formulario</h1>
+
+        <div>
+            <p>Introduce tu nombre</p>
+            <input type="text" placeholder="Introduce nombre" />
+        </div>
+        <div>
+            <p>Comentarios</p>
+            <textarea id="comentarios" name="comentarios" rows="4" cols="50" required></textarea>
+        </div>
+        <br><input type="submit" value="Enviar" />
+
+        <section class="comment">
+            <h2>Comentarios</h2>
+            <div class="commentarios">
+                <p class="author">Usuario1</p>
+                <p>Interesante planteamiento.</p>
+                <p class="fecha">11 de marzo de 2024</p>
+            </div>
+            <div class="commentarios">
+                <p class="author">Usuario2</p>
+                <p>Un poco dificil de entender pero muy entretenido.</p>
+                <p class="fecha">12 de marzo de 2024</p>
+            </div>
+        </section>
+    </section>
+
+</body>
+
+</html>

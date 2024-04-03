@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript | Ll</title>
+
+</head>
+
+<style>
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .contenido {
+    max-width: 85%;
+    margin: 20px auto;
+    padding: 20px;
+    margin-bottom: 150px;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+
+  ol li {
+    margin-bottom: 40px;
+  }
+
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .lista {
+    font-weight: bold;
+  }
+
+  ol a:hover {
+    color: #0056b3;
+  }
+
+  .cuadro {
+    width: 95%;
+    height: 300px;
+    background-color: #ccc;
+    border: 5px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .cuadro p {
+    margin: 0;
+    color: #333;
+  }
+
+  .opcion {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+  }
+</style>
+
+<body>
+  <header>
+    <h1>El Oráculo de los Sueños</h1>
+  </header>
+
+  <div id="historia" class="contenido">
+    <p>Viajas para encontrar el orcaulo de los sueños, al revisar el mapa te encuentras con dos caminos que llevan
+      al mismo punto, tienes que elegir cual de los 2 tomar, el primero pasa por un lago y el segundo pasa por un
+      desierto</p>
+    <div id="opciones">
+      <p class="opcion" onclick="seleccionarCamino(1)">Tomar el camino del lago</p>
+      <p class="opcion" onclick="seleccionarCamino(2)">Tomar el camino del desierto</p>
+    </div>
+  </div>
+
+  <script>
+    function seleccionarCamino(opcion) {
+      var historia = document.getElementById('historia');
+      var opciones = document.getElementById('opciones');
+
+      // Vaciar contenido de historia
+      historia.innerHTML = '';
+
+      // Ocultar opciones
+      opciones.style.display = 'none';
+
+      if (opcion === 1) {
+        historia.innerHTML += `
+              <h1>Camino del lago</h1>
+              <p>Decidiste tomar el camino del Lago al intentar crusarlo te cansaste por las fuertes corrientes.</p>
+              <p>Tu cuerpo esta agotado ¿Que quieres hacer?</p>
+              <div id="opciones">
+                <p class="opcion" onclick="seguircondescanso()">Seguir pero tomar pequeños descansos</p>
+                <p class="opcion" onclick="seguir()">Continuar el camino, no importa si estas cansado</p>
+              </div>
+            `;
+      } else if (opcion === 2) {
+        historia.innerHTML += `
+              <h1>Camino del desierto</h1>
+              <p>Decidiste tomar el camino del desierto, pero fue un camino corto y sin percanses</p>
+              <p>al final ves un puente roto ¿Que decides hacer?</p>
+              <div id="opciones">
+                <p class="opcion" onclick="explorarOasis()">intentar crusarlo</p>
+                <p class="opcion" onclick="continuarCamino()">buscar otro camino</p>
+              </div>
+            `;
+      }
+    }
+    function seleccionarCamino(opcion) {
+      var historia = document.getElementById('historia');
+      var opciones = document.getElementById('opciones');
+
+      historia.innerHTML = '';
+
+      opciones.style.display = 'none';
+
+      if (opcion === 1) {
+        historia.innerHTML += `
+              <h1>Camino del lago</h1>
+              <p>Decidiste tomar el camino del Lago al intentar crusarlo te cansaste por las fuertes corrientes.</p>
+              <p>Tu cuerpo esta agotado ¿Que quieres hacer?</p>
+              <div id="opciones">
+                <p class="opcion" onclick="seguircondescanso()">Seguir pero tomar pequeños descansos</p>
+                <p class="opcion" onclick="nodesseguir()">Continuar el camino, no importa si estas cansado</p>
+              </div>
+            `;
+      } else if (opcion === 2) {
+        historia.innerHTML += `
+              <h1>Camino del desierto</h1>
+              <p>Decidiste tomar el camino del desierto, pero fue un camino corto y sin percanses</p>
+              <p>al final ves un puente roto ¿Que decides hacer?</p>
+              <div id="opciones">
+                <p class="opcion" onclick="crusarps()">intentar crusarlo</p>
+                <p class="opcion" onclick="nocrusarps()">buscar otro camino</p>
+              </div>
+            `;
+      }
+    }
+    function nodesseguir() {
+      var historia = document.getElementById('historia');
+      var nuevoContenido = `
+            <h1>Perdiste!</h1>
+              <p>Debido al cansacion te desmayas y perdiste</p>
+            `;
+
+      historia.innerHTML = nuevoContenido;
+    }
+    function seguircondescanso() {
+      var historia = document.getElementById('historia');
+      var nuevoContenido = `
+            <h1>Puente</h1>
+              <p>al final ves un puente roto ¿Que decides hacer?</p>
+              <div id="opciones">
+                <p class="opcion" onclick="crusarps()">intentar crusarlo</p>
+                <p class="opcion" onclick="nocrusarps()">buscar otro camino</p>
+              </div>
+            `;
+
+      historia.innerHTML = nuevoContenido;
+    }
+    function crusarps() {
+      var historia = document.getElementById('historia');
+      var nuevoContenido = `
+            <h1>Felicidades llegaste!</h1>
+              <p>Crusaste el puente y llegaste a tu objetivo!</p>
+              <p>Encontraste un mapa con la ubicacion del oraculo
+            `;
+
+      historia.innerHTML = nuevoContenido;
+    }
+    function nocrusarps() {
+      var historia = document.getElementById('historia');
+      var nuevoContenido = `
+            <h1>Encontraste un barranco!</h1>
+              <p>Encontraste otro camino pero este barranco...</p>
+              <p>parece inestable, Deseas crusarlo o regresar e ir por el puente?
+                <div id="opciones">
+                <p class="opcion" onclick="crusarbs()">intentar crusarlo el barranco</p>
+                <p class="opcion" onclick="crusarps()">regresar e ir por el puente</p>
+              </div>
+            `;
+
+      historia.innerHTML = nuevoContenido;
+    }
+    function crusarbs() {
+      var historia = document.getElementById('historia');
+      var nuevoContenido = `
+            <h1>Intentas cruzar el barranco pero se derrumbo..</h1>
+              <p>Perdiste :(</p>
+            `;
+
+      historia.innerHTML = nuevoContenido;
+    }
+
+
+
+  </script>
+
+
+
+  <footer>
+    <p>Información de contacto: ejemplo@example.com | Teléfono: 123456789</p>
+  </footer>
+</body>
+
+</html>

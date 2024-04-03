@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .calendar {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .month {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .weekdays {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            background-color: #f2f2f2;
+            padding: 10px 0;
+        }
+
+        .days {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 1px;
+        }
+
+        .day {
+            text-align: center;
+            padding: 10px 0;
+            border: 1px solid #ccc;
+        }
+
+        .fecha1 {
+            background-color: yellow;
+        }
+
+        .fecha2 {
+            background-color: rgb(255, 17, 0);
+        }
+
+        .fecha3 {
+            background-color: rgb(255, 0, 212);
+        }
+
+        .bloque1 {
+            background-color: yellow;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            color: black;
+            font-size: 15px;
+            font-weight: bold;
+            margin-right: 40px;
+            display: inline-block;
+            margin-top: 50px;
+        }
+
+        .bloque2 {
+            background-color: rgb(255, 17, 0);
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            color: black;
+            font-size: 15px;
+            font-weight: bold;
+            margin-right: 40px;
+            display: inline-block;
+            margin-top: 50px;
+        }
+
+        .bloque3 {
+            background-color: rgb(255, 0, 212);
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            color: black;
+            font-size: 15px;
+            font-weight: bold;
+            margin-right: 40px;
+            display: inline-block;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calendar">
+        <div class="month">
+            <h2>Septiembre 2024</h2>
+        </div>
+        <div class="weekdays">
+            <div>Domingo</div>
+            <div>Lunes</div>
+            <div>Martes</div>
+            <div>Miércoles</div>
+            <div>Jueves</div>
+            <div>Viernes</div>
+            <div>Sábado</div>
+        </div>
+        <div class="days">
+            <script>
+                for (let i = 1; i <= 30; i++) {
+                    if (i === 5) {
+                        document.write(`<div class="day fecha1">${i}</div>`);
+                    } else if (i === 17) {
+                        document.write(`<div class="day fecha2">${i}</div>`);
+                    } else if (i === 30) {
+                        document.write(`<div class="day fecha3">${i}</div>`);
+                    } else {
+                        document.write(`<div class="day">${i}</div>`);
+                    }
+                }
+            </script>
+        </div>
+    </div>
+    <div class="bloque1">
+        Reunion de Oficiona (9AM)</div>
+    <div class="bloque2">
+        Fiesta Cumpleaños (8PM) </div>
+    <div class="bloque3">
+        Fiesta 15 años (6PM) </div>
+
+
+</body>
+
+</html>
