@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título con color de fondo</title>
+    <style>
+        .title-with-background {
+            background-color: rgb(46, 46, 46);
+            color: #fff;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            margin: 0;
+            text-align: center;
+        }
+
+        .content {
+            margin-top: 80px;
+        }
+
+        .contenedoriz {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .txtiz {
+            flex: 1;
+            text-align: justify;
+            max-width: 400px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+
+        .imagenciz {
+            flex: 0 0 auto;
+            width: 500px;
+            height: 450px;
+            border-radius: 10px;
+            order: -1;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="title-with-background">Mascota Imaginaria</h1>
+    <div class="content">
+        <div class="contenedoriz">
+            <div class="txtiz">
+                <p><strong>Nombre</strong> NeoCanis Exotica</p>
+                <p><strong>Edad</strong> 4</p>
+
+                <p>Había una vez, en un mundo no muy lejano, una nueva raza de mascotas llamada "NeoCanis Exotica". Este
+                    animal, a diferencia de cualquier otro, tenía características únicas y fascinantes.</p>
+                <p>La primera vez que se descubrió al NeoCanis Exotica fue en las profundidades de una selva tropical
+                    inexplorada. Un grupo de científicos se encontró con este animal mientras estudiaban la
+                    biodiversidad de la región. Quedaron asombrados por su belleza y singularidad, y decidieron llevarlo
+                    de vuelta para estudiarlo más a fondo.</p>
+                <p>Con el tiempo, el NeoCanis Exotica se adaptó a la vida doméstica. A pesar de sus habilidades y
+                    características únicas, era un animal cariñoso y juguetón. Se convirtió en una mascota popular
+                    debido a su naturaleza amigable y su apariencia única.</p>
+            </div>
+            <img class="imagenciz"
+                src="https://th.bing.com/th/id/OIG1.p2GS2vKDgT81BRsRtRIf?w=1024&h=1024&rs=1&pid=ImgDetMain" alt="">
+        </div>
+    </div>
+</body>
+
+</html>

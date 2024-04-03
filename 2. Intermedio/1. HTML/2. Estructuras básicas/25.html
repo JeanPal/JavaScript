@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título con color de fondo</title>
+    <style>
+        .title-with-background {
+            background-color: rgb(46, 46, 46);
+            color: #fff;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            margin: 0;
+            text-align: center;
+        }
+
+        .content {
+            margin-top: 80px;
+        }
+
+        .contenedoriz {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .txtiz {
+            flex: 1;
+            text-align: justify;
+            max-width: 400px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+
+        .imagenciz {
+            flex: 0 0 auto;
+            width: 350px;
+            height: 200px;
+            border-radius: 10px;
+            order: -1;
+            margin-right: 20px;
+        }
+
+        .image img {
+            max-width: 40%;
+            height: auto;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="title-with-background">Juego Deportivo voleibol</h1>
+    <div class="content">
+        <center>
+            <div class="image"> <img
+                    src="https://olimpicocol.co/web/wp-content/uploads/2022/06/descarga-2022-06-13T140448.407.jpg">
+            </div>
+            <p>El voleibol es un deporte de equipo jugado en una cancha dividida por una red, donde dos equipos compiten
+                para enviar un balón por encima de la red y hacerlo tocar el suelo del campo contrario. El voleibol es
+                un deporte dinámico y emocionante que requiere habilidad, agilidad, coordinación y trabajo en equipo.
+                Surgió en Estados Unidos a fines del siglo XIX y desde entonces se ha expandido por todo el mundo,
+                convirtiéndose en uno de los deportes más populares tanto a nivel amateur como profesional.</p>
+        </center>
+        <div class="contenedoriz">
+            <div class="txtiz">
+                <h1>Reglas</h1>
+                <ol>
+                    <li>Pueden jugar 6 jugadores por equipo, tres delanteros situados en la zona de ataque, y tres
+                        defensores o zagueros ubicados en la zona de defensa.</li>
+                    <li>No se permite variar el orden de rotación durante el set.</li>
+                    <li>Los jugadores pueden moverse después del saque ocupando cualquier posición en su campo y en la
+                        zona libre.</li>
+                    <li>El balón puede jugarse fuera de la red durante una jugada y en un saque.</li>
+                    <li>Una pelota que toca una línea limítrofe es válida.</li>
+                    <li>Se cometen faltas cuando un jugador toca el balón dos veces seguidas, hay contacto con la red
+                        durante el juego, el balón toca el suelo fuera de los límites, etc.</li>
+                </ol>
+            </div>
+            <img class="imagenciz"
+                src="https://starsvolleyball.es/wp-content/uploads/elementor/thumbs/doble-golpe-q3b5ukn9aa97h4e3dk4g17ie22p15m5r71ofvtslw4.jpg"
+                alt="">
+        </div>
+        <center>
+            <h2>Mejores Equipos</h2>
+            <div class="image"> <img
+                    src="https://img.olympics.com/images/image/private/t_s_pog_staticContent_hero_xl_2x/f_auto/primary/zgiu7yzrjjo1wtibjr1q">
+            </div>
+            <p>El mejor ranking de las mejores ligas de voleibol profesional masculino del mundo. Estas ligas son
+                atractivas para los aficionados, cuentan con decenas de jugadores de talla mundial y cuentan con los
+                mejores clubes del mundo.</p>
+            <ol style="text-align: center; list-style-position: inside;">
+                <li>Italia- Superlega (Lube Civitanova, Sir Safety Perugia, Diatec Trentino)</li>
+                <li>Rusia-Superliga de Voleibol (Zenit Kazan, Lokomotiv Novosibirsk, Bielgorje Bielgorod)</li>
+                <li>Brasil- Superliga (Sada Cruzeiro, Funvic Taubaté, SESI São Paulo)</li>
+                <li>Polonia- PlusLiga (Mariusz Wlazly, Milad Ebadipur, Piotr Nowakowski)</li>
+            </ol>
+        </center>
+    </div>
+</body>
+
+</html>
