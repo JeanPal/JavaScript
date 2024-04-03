@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Mi pagina</title>
+    <style>
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
+        }
+        
+        li {
+          float: left;
+        }
+        
+        li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        li a:hover:not(.active) {
+          background-color: #111;
+        }
+        
+        .active {
+          background-color: #0686FF;
+        }
+        .imagen {
+            width: 100%; /* Ancho de la imagen */
+            max-height: 500px;
+            display: block; /* Hacer que la imagen sea un bloque */
+            margin: 0px auto; /* Centrar la imagen horizontalmente con un margen superior e inferior */ 
+        }
+        .texto-superpuesto {
+            position: absolute; /* Establece la posición absoluta con respecto al contenedor */
+            top: 50%; /* Posiciona el texto en la mitad superior del contenedor */
+            left: 50%; /* Alinea el texto al centro horizontal del contenedor */
+            transform: translate(-50%, -50%); /* Centra el texto vertical y horizontalmente */
+            color: white; /* Color del texto */
+            font-size: 55px; /* Tamaño de fuente */
+            text-align: center; /* Alineación del texto al centro */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra de texto para mejorar la legibilidad */
+            max-width: 80%; /* Ancho máximo del texto */
+            font-weight: bold;
+        }
+
+        .subtexto {
+            font-size: 25px; /* Tamaño de fuente para el subtexto */
+            margin-top: 10px; /* Margen superior para separar el subtexto del texto principal */
+        }
+
+        /* Media query para pantallas pequeñas */
+        @media (max-width: 768px) {
+            .texto-superpuesto {
+                font-size: 18px; /* Tamaño de fuente reducido para pantallas pequeñas */
+            }
+        }
+
+
+        /*precio*/
+        body {
+    font-family: Arial, sans-serif;
+  }
+
+  table {
+    width: 80%;
+    margin: 0 auto; /* Centrar la tabla */
+    border-collapse: collapse;
+    text-align: center; /* Centrar el texto en las celdas */
+  }
+
+  th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  tr:hover {
+    background-color: #f5f5f5;
+  }
+
+  th {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .servicio-img {
+    width: 50px;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centrar la imagen */
+  }
+
+
+        </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="./7.html">Inicio</a></li>
+        <li><a href="./7.1.html">Precios</a></li>
+        <li style="float:right"><a class="active" href="./7.2.html">Escribenos</a></li>
+      </ul>
+
+    <img class="imagen" src="https://image.freepik.com/foto-gratis/drone-volando-sobre-cielo-al-atardecer-nubes-luz_73110-2208.jpg" alt="Imagen de ejemplo">
+
+    <div class="texto-superpuesto">
+        Precios
+        <p class="subtexto">Checa la tabla de precios de los drones mas conocidos (COP)</p>
+    </div>
+
+    <br>
+
+    <center><h2>Tabla de Precios</h2></center>
+    <br>
+    <table>
+        <tr>
+          <th>Tipo de Drones</th>
+          <th>Precio (COP)</th>
+        </tr>
+        <tr>
+          <td>
+            <img src="https://http2.mlstatic.com/D_NQ_NP_705178-MCO44250182323_122020-O.webp" alt="Servicio 1" class="servicio-img">
+            <p>
+                Drone Ls-e525 Pro</p>
+          </td>
+          <td>446.125</td>
+        </tr>
+        <tr>
+          <td>
+            <img src="https://http2.mlstatic.com/D_NQ_NP_814792-MCO73312783835_122023-O.webp" alt="Servicio 2" class="servicio-img">
+            <p>
+                Drone Dj-1</p>
+          </td>
+          <td>255.000</td>
+        </tr>
+        <tr>
+          <td>
+            <img src="https://http2.mlstatic.com/D_NQ_NP_907439-MLA45795195203_052021-O.webp" alt="Servicio 3" class="servicio-img">
+            <p>
+                Drone Eachine E58</p>
+          </td>
+          <td>
+            117.481</td>
+        </tr>
+        <tr>
+            <td>
+              <img src="https://http2.mlstatic.com/D_NQ_NP_790467-MCO46153686633_052021-O.webp" alt="Servicio 3" class="servicio-img">
+              <p>
+                Drone Dm107s</p>
+            </td>
+            <td>
+                345.000</td>
+          </tr>
+      </table>
+
+      <br>
+<center>
+      <h2>Video demostrativo</h2>
+
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/5v5N9axHtdM" frameborder="0" allowfullscreen></iframe>
+
+
+</center>
+    <br>
+
+
+</body>
+
+</html>
