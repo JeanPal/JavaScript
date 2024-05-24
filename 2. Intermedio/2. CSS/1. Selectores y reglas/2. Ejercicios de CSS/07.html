@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menú Desplegable con Submenú</title>
+<style>
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .sub-menu {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content li:hover .sub-menu {
+        display: block;
+    }
+
+    .sub-menu a {
+        padding: 5px;
+        text-decoration: none;
+        display: block;
+        color: black;
+    }
+
+    .sub-menu a:hover {
+        background-color: #f1f1f1;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+</style>
+</head>
+<body>
+
+<div class="dropdown">
+    <span>Menú</span>
+    <div class="dropdown-content">
+        <ul>
+            <li><a href="#">Opción 1</a></li>
+            <li><a href="#">Opción 2</a>
+                <ul class="sub-menu">
+                    <li><a href="#">Submenú 1</a></li>
+                    <li><a href="#">Submenú 2</a></li>
+                    <li><a href="#">Submenú 3</a></li>
+                </ul></li>
+            <li><a href="#">Opción 3</a></li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>

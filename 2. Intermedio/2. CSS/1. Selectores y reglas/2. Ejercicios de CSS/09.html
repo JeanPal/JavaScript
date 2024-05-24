@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Navegación Horizontal</title>
+    <style>
+        .cuadro {
+            width: 300px;
+            height: 400px;
+            background-color: #f0f0f0;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        li {
+            margin-bottom: 40px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .comment {
+            background-color: #f9f9f9;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .comment-info {
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cuadro" id="registro">
+        <form onsubmit="return validarFormulario()">
+            <ul>
+                <li>
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="user_name" required />
+                </li>
+                <li>
+                    <label for="mail">Correo electrónico:</label>
+                    <input type="email" id="mail" name="user_mail" required />
+                </li>
+                <li>
+                    <label for="comment">Ingrese comentario:</label>
+                    <textarea id="comment" name="comment" rows="4" cols="20" placeholder="Escribe tu comentario aquí"
+                        required></textarea><br><br>
+                </li>
+            </ul>
+            <center><button type="submit">Publicar comentario</button></center>
+        </form>
+    </div>
+
+    <h2>Comentarios</h2>
+    <ul class="comment-list" id="comment-list">
+    </ul>
+
+    <script>
+        function validarFormulario() {
+            var nombre = document.getElementById("name").value;
+            var correo = document.getElementById("mail").value;
+            var comentario = document.getElementById("comment").value;
+
+            if (nombre === "" || correo === "" || comentario === "") {
+                alert("Por favor complete todos los campos.");
+                return false;
+            }
+
+            var commentList = document.getElementById("comment-list");
+            var newCommentItem = document.createElement("li");
+            newCommentItem.classList.add("comment");
+            newCommentItem.innerHTML = '<div class="comment-info">Por: ' + nombre + ' &lt;' + correo + '&gt;</div>' +
+                '<p>' + comentario + '</p>';
+            commentList.appendChild(newCommentItem);
+
+            document.getElementById("name").value = "";
+            document.getElementById("mail").value = "";
+            document.getElementById("comment").value = "";
+
+            return false;      
+        }
+    </script>
+
+</body>
+
+</html>
