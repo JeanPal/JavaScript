@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caja</title>
+    <style>
+        .padre {
+            font-size: 14px;
+        }
+
+        .hijo {
+            height: 2em;
+        }
+
+        @media (min-width: 16px) {
+            .padre {
+                font-size: 16px;
+            }
+
+            .hijo {
+                height: auto;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="padre">
+        <div class="hijo">
+            Elemento dentro
+        </div>
+    </div>
+
+</body>
+
+</html>
