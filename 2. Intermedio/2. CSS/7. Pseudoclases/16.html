@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclases</title>
+    <style>
+        ul {
+            list-style-type: none;
+
+        }
+
+        .icono1::before {
+            content: "→";
+            margin-right: 5px;
+        }
+
+        /* Clase para el icono de estrella */
+        .icono2::before {
+            content: "★"; /* Unicode para el icono de estrella */
+            margin-right: 10px;
+        }
+
+        /* Clase para el icono de corazón */
+        .icono3::before {
+            content: "♥"; /* Unicode para el icono de corazón */
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul>
+        <li class="icono1">Elemento 1</li>
+        <li class="icono2">Elemento 2</li>
+        <li class="icono3">Elemento 3</li>
+    </ul>
+
+</body>
+
+</html>
