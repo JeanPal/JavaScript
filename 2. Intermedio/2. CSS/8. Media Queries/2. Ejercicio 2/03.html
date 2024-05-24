@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        .seccion {
+            height: 500px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        @media only screen and (min-width: 1200px) {
+            .seccion {
+                background-image: url('https://www.adslzone.net/app/uploads-adslzone.net/2019/04/borrar-fondo-imagen-1.jpg');
+            }
+        }
+
+        @media only screen and (max-width: 1200px) {
+            .seccion {
+                background-image: url('https://concepto.de/wp-content/uploads/2020/12/imagen-e1607991758274-800x400.jpg');
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="seccion">
+    </section>
+
+</body>
+
+</html>

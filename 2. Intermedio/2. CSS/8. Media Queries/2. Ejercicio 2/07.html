@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Encabezado Fijo</title>
+<style>
+  section {
+    padding-top: 300px;
+  }
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: top 0.3s; /* Agregamos una transición suave para suavizar el efecto de aparecer/desaparecer */
+  }
+
+  /* Definimos una media query para cuando el dispositivo está en orientación vertical (portrait) */
+  @media (orientation: portrait) {
+    /* Establecemos que el encabezado fijo solo se muestre después de hacer scroll de 200px */
+    header.fixed {
+      top: -60px; /* Le damos un desplazamiento negativo para ocultarlo inicialmente */
+    }
+  }
+</style>
+</head>
+<body>
+
+<header id="header">
+  <h1>Encabezado Fijo</h1>
+</header>
+
+<section>
+  <p>Contenido principal aquí...</p>
+</section>
+
+<section>
+  <p>Contenido principal aquí...</p>
+</section>
+
+<section>
+  <p>Contenido principal aquí...</p>
+</section>
+
+<script>
+window.addEventListener('scroll', function() {
+  var header = document.getElementById('header');
+  if (window.scrollY > 200 && window.innerHeight > window.innerWidth) {
+    header.classList.add('fixed'); // Agregamos la clase 'fixed' al encabezado
+  } else {
+    header.classList.remove('fixed'); // Removemos la clase 'fixed' del encabezado
+  }
+});
+</script>
+
+</body>
+</html>

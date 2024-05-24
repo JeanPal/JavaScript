@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slider Automático</title>
+  <style>
+    .slider {
+      width: 50%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .img {
+        width: 100%;
+    }
+
+    .slides {
+      display: flex;
+      animation: slideAnimation 10s infinite;
+    }
+
+    @keyframes slideAnimation {
+      0% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(-200%);
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .slides {
+        animation: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="slider">
+    <div class="slides">
+      <div>
+        <img src="https://img.freepik.com/foto-gratis/colores-arremolinados-interactuan-danza-fluida-sobre-lienzo-que-muestra-tonos-vibrantes-patrones-dinamicos-que-capturan-caos-belleza-arte-abstracto_157027-2892.jpg" alt="Imagen 1">
+      </div>
+      <div>
+        <img src="https://concepto.de/wp-content/uploads/2020/12/imagen-e1607991758274-800x400.jpg" alt="Imagen 2">
+      </div>
+      <div>
+        <img src="https://kinsta.com/es/wp-content/uploads/sites/8/2020/10/tipos-de-archivos-de-imagen.png" alt="Imagen 2">
+      </div>
+    </div>
+  </div>
+</body>
+</html>

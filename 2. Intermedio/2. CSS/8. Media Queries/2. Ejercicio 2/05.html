@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        .boton {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            background-color: #007bff;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .boton:hover {
+            background-color: #0056b3;
+            transform: translateX(10px);
+        }
+
+        @media only screen and (min-resolution: 192dpi) {
+            .boton {
+                background-image: linear-gradient(45deg, #007bff, #0056b3);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="boton">Haz Hover</button>
+
+</body>
+
+</html>
