@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>caja de 200px</title>
+<style>
+    .caja {
+        width: 200px;
+        height: 200px;
+        position: relative;
+    }
+
+    .caja::before {
+        content: "";
+        position: absolute;
+        top: -10px; 
+        left: -10px; 
+        right: -10px; 
+        bottom: -10px; 
+        z-index: -1; 
+        background: linear-gradient(to right, red, purple) top, 
+                    linear-gradient(to bottom, green, blue) bottom, 
+                    linear-gradient(to left, red, purple) left, 
+                    linear-gradient(to top, green, blue) right; 
+        background-size: 100% 10px, 100% 10px, 10px 100%, 10px 100%; 
+        background-repeat: no-repeat; 
+    }
+</style>
+</head>
+<body>
+
+<div class="caja"></div>
+
+</body>
+</html>

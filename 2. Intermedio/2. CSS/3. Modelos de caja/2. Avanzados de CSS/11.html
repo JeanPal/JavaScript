@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caja con Borde de Imagen Dinámico</title>
+  <style>
+    .caja {
+      width: 300px;
+      height: 200px;
+      background-color: #f0f0f0;
+      text-align: center;
+      line-height: 200px;
+      font-family: Arial, sans-serif;
+      font-size: 20px;
+      cursor: pointer;
+      border: 10px solid transparent;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .caja::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      border: 10px solid transparent;
+      border-radius: inherit;
+      animation: cambioColor 5s infinite linear;
+    }
+
+    @keyframes cambioColor {
+      0% { border-color: #ff0000; }
+      50% { border-color: #00ff00; }
+      100% { border-color: #0000ff; }
+    }
+  </style>
+</head>
+<body>
+  <div class="caja" id="caja">
+    ¡Pasa el cursor sobre mí!
+  </div>
+</body>
+</html>

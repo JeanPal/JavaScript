@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Movimiento Cursor</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #caja {
+      width: 510px;
+      height: 365px;
+      background-color: blue;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: url(https://t4.ftcdn.net/jpg/02/61/80/55/360_F_261805519_1dBCfei509IeCIZNTYFHV2VwHsBbuEJl.jpg);
+    }
+  </style>
+</head>
+<body>
+  <div id="caja"></div>
+  <script>
+    document.addEventListener('mousemove', function(e) {
+      var caja = document.getElementById('caja');
+      var x = e.clientX;
+      var y = e.clientY;
+      caja.style.left = x + 'px';
+      caja.style.top = y + 'px';
+    });
+  </script>
+</body>
+</html>

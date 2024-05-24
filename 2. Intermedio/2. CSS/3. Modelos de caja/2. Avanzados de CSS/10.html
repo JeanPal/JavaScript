@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imagen en el borde</title>
+  <style>
+    .caja {
+      position: relative;
+      width: 90%;
+      max-width: 600px;
+      height: auto;
+      margin: 20px auto;
+    }
+
+    .caja img {
+      width: 50%;
+      height: auto;
+      object-fit: cover;
+      z-index: -1;
+      border: 5px solid #000;
+      border-radius: 10px;
+      transition: border-color 0.3s;
+    }
+  </style>
+</head>
+<body>
+  <div class="caja" onmouseover="moverImagen()">
+    <img id="imagen" src="https://t4.ftcdn.net/jpg/02/61/80/55/360_F_261805519_1dBCfei509IeCIZNTYFHV2VwHsBbuEJl.jpg">
+  </div>
+
+  <script>
+    function getRandomColor() {
+      const letters = '0123456789ABCDEF';
+      let color = '#';
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    function getRandomPosition() {
+      const maxWidth = window.innerWidth - 300; 
+      const maxHeight = window.innerHeight - 300; 
+      const x = Math.floor(Math.random() * maxWidth);
+      const y = Math.floor(Math.random() * maxHeight);
+      return { x, y };
+    }
+
+    function moverImagen() {
+      const imagen = document.getElementById('imagen');
+      const newPosition = getRandomPosition();
+      const newColor = getRandomColor();
+      imagen.style.transform = `translate(${newPosition.x}px, ${newPosition.y}px)`;
+      imagen.style.borderColor = newColor;
+    }
+  </script>
+</body>
+</html>

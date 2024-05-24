@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>caja de 200px</title>
+<style>
+    .caja {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        border: 2px solid navy;
+    }
+
+    .imagen {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1; 
+    }
+</style>
+</head>
+<body>
+
+<div class="caja">
+
+    <img class="imagen" src="https://www.adslzone.net/app/uploads-adslzone.net/2019/04/borrar-fondo-imagen-1.jpg">
+</div>
+
+</body>
+</html>
