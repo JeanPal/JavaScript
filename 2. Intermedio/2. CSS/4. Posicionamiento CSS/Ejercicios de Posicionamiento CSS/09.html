@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabla Compleja</title>
+  <style>
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: montserrart;
+}
+nav {
+    background: cadetblue;
+    height: 80px;
+    width: 100%;
+}
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+a.active, a:hover{
+    background: blueviolet;
+    transition: .5s;
+}
+.presentacion {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 95vh;
+    padding: 0 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.presentacion .text {
+    max-width: 50%;
+  color: #000000;
+}
+
+.text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.text p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #201e1e;
+}
+.presentacion .buttons{
+    margin-top: 40px;
+}
+.presentacion .buttons a{
+    text-decoration: none;
+    color: #1c04f8;
+    padding: 12px 24px;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    transition: 0.2s ease;
+    display: inline-block;
+}
+.presentacion .img img {
+  width: 517px;
+}
+.buttons .join {
+  background-color: #47b2e4;
+}
+.buttons .learn {
+  background-color: #9bd1eb;
+}
+
+.info {
+  text-align: center;
+}
+
+.info .info-p{
+  padding-top: 20px;
+}
+
+
+/* Estilos para los cuadros */
+
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    max-width: 1250px;
+    margin: 150px auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+.card-list .card-item {
+    background: #05eeff;
+    padding: 26px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+}
+
+.card-list .card-item img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.card-item h3 {
+    color: #000;
+    font-size: 1.438rem;
+    margin-top: 28px;
+    font-weight: 600;
+}
+
+.card-list span {
+    display: inline-block;
+    background: #F7DFF5;
+    margin-top: 32px;
+    padding: 8px 15px;
+    font-size: 0.75rem;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+
+  </style>
+</head>
+<body>
+    <nav class="menu">
+        <label class="logo">Logo</label>
+        <ul>
+          <li><a href="#" class="active">Inicio</a></li>
+          <li><a href="#">Sobre nosotros</a></li>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <section class="presentacion">
+        <div class="text">
+          <h2>Lorem ipsum dolor sit amet consectetur, adipisici</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisici, end lorem to and
+            praesentium delectus officia dolor accusantium at id, ratione a facilis totam animi?
+            iusto cumque nisi ab. Tenetur maiores maxime officiis .
+          </p>
+          <div class="buttons">
+            <a href="#" class="join">Join Now</a>
+            <a href="#" class="learn">Learn More</a>
+          </div>
+        </div>
+        <div class="img">
+          <img src="https://www.servnet.mx/hubfs/Blog/Blog_Articulos/Blog_Art%C3%ADculos/Blog_Articulos_2023_Enero/Blog_Articulos_2023_Enero_Art22_15TEC/15-beneficios-de-la-tecnologia-para-empresas.png#keepProtocol" alt="hero image" />
+        </div>
+      </section>
+
+      <div class="info">
+      <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
+      <p class="info-p">Natus officia pariatur explicabo, tempora eligendi quis fugiat neque obcaecati ad iusto excepturi debitis doloremque aliquid delectus esse dolorum unde nisi similique.</p>
+      <p class="info-p">Natus officia pariatur explicabo, tempora eligendi quis fugiat neque obcaecati ad iusto excepturi debitis doloremque aliquid delectus esse dolorum unde nisi similique.</p>
+      </div>
+
+      <div class="card-list">
+        <a href="#" class="card-item">
+            <img src="https://www.adslzone.net/app/uploads-adslzone.net/2019/04/borrar-fondo-imagen-1.jpg" alt="Card Image">
+            <span>Developer</span>
+            <h3>A "developer" codes software and websites.</h3>
+        </a>
+        <a href="#" class="card-item">
+            <img src="https://empresas.blogthinkbig.com/wp-content/uploads/2019/11/Imagen3-245003649.jpg?fit=960%2C720" alt="Card Image">
+            <span>Designer</span>
+            <h3>A "designer" is a design expert.</h3>
+        </a>
+        <a href="#" class="card-item">
+            <img src="https://kinsta.com/es/wp-content/uploads/sites/8/2020/10/tipos-de-archivos-de-imagen.png" alt="Card Image">
+            <span>Editor</span>
+            <h3>An "editor" ensures content quality and accuracy.</h3>
+        </a>
+    </div>
+</body>
+</html>
